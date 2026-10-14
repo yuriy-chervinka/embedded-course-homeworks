@@ -14,6 +14,7 @@ In order to switch between different programs select proper env (mentioned in ea
 - Програма має працювати циклічно.  
 
 **Scheme:**  
+
     ESP32-S3 DevKit  
     ┌─────────────┐  
     │             │  
@@ -39,6 +40,7 @@ Simple single loop for both LEDs blinking.
 - ускладнити патерн миготіння  
 
 **Scheme:**  
+
     ESP32-S3 DevKit  
     ┌─────────────┐  
     │             │  
@@ -64,6 +66,7 @@ Async tasks for independent LEDs control.
 - додати третій світлодіод  
 
 **Scheme:**  
+
     ESP32-S3 DevKit  
     ┌─────────────┐  
     │             │  
@@ -91,6 +94,7 @@ Simple loop but with LL approach.
 - змінювати швидкість миготіння  
 
 **Scheme:**  
+
     ESP32-S3 DevKit  
     ┌─────────────┐  
     │             │  
@@ -114,6 +118,7 @@ Simple loop but using registers and interruptions.
 - зменшити кількість задіяних пінів: змусити обидва світлодіоди блимати по черзі за допомогою лише одного GPIO-виводу.  
 
 **Scheme:**  
+
     ESP32-S3 DevKit  
     ┌─────────────┐  
     │             │  
