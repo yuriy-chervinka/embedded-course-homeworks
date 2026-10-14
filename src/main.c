@@ -1,35 +1,30 @@
 #include <stdio.h>
-#include <freertos/FreeRTOS.h>
-#include <freertos/task.h>
-#include <driver/gpio.h>
-#include <esp_log.h>
 
-#define RED_LED 48
-#define BLUE_LED 2
+#if defined(RUN_HW1_PROG1)
+    void run_hw1_prog1(void);
+#elif defined(RUN_HW1_PROG2)
+    void run_hw1_prog2(void);
+#elif defined(RUN_HW1_PROG3)
+    void run_hw1_prog3(void);
+#elif defined(RUN_HW1_PROG4)
+    void run_hw1_prog4(void);
+#elif defined(RUN_HW1_PROG5)
+    void run_hw1_prog5(void);
+#endif
 
-static const char *TAG = "ESP32-led-blink";
 
-
-void app_main() {
-    // configure pins
-    gpio_reset_pin(RED_LED);
-    gpio_set_direction(RED_LED, GPIO_MODE_OUTPUT);
-    gpio_reset_pin(BLUE_LED);
-    gpio_set_direction(BLUE_LED, GPIO_MODE_OUTPUT);
-
-    // blink loop
-    while (1) {
-        gpio_set_level(RED_LED, 1);
-        ESP_LOGI(TAG, "Red LED ON");
-        gpio_set_level(BLUE_LED, 0);
-        ESP_LOGI(TAG, "Blue LED OFF");
-        vTaskDelay(1000 / portTICK_PERIOD_MS);
-
-        gpio_set_level(RED_LED, 0);
-        ESP_LOGI(TAG, "Red LED OFF");
-        gpio_set_level(BLUE_LED, 1);
-        ESP_LOGI(TAG, "Blue LED ON");
-        vTaskDelay(1000 / portTICK_PERIOD_MS);
-
-    }
+void app_main(void) {
+    #if defined(RUN_HW1_PROG1)
+        run_hw1_prog1();
+    #elif defined(RUN_HW1_PROG2)
+        run_hw1_prog2();
+    #elif defined(RUN_HW1_PROG3)
+        run_hw1_prog3();
+    #elif defined(RUN_HW1_PROG4)
+        run_hw1_prog4();
+    #elif defined(RUN_HW1_PROG5)
+        run_hw1_prog5();
+    #else
+        printf("\nNo program selected!\n")
+    #endif
 }
