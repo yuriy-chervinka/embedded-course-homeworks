@@ -185,6 +185,6 @@ Simple loop. Which LED On is controlled by current direction (level on GPIO).
 Simple loop. Which LED On is controlled by current direction (level on GPIO).  
 
 **env:**  
-`env:hw1_program5`  
+`env:hw2_program1`  
 
 ---
