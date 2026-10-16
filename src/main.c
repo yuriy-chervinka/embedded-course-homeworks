@@ -10,6 +10,8 @@
     void run_hw1_prog4(void);
 #elif defined(RUN_HW1_PROG5)
     void run_hw1_prog5(void);
+#elif defined(RUN_HW2_PROG1)
+    void run_hw2_prog1(void);
 #endif
 
 
@@ -24,6 +26,8 @@ void app_main(void) {
         run_hw1_prog4();
     #elif defined(RUN_HW1_PROG5)
         run_hw1_prog5();
+    #elif defined(RUN_HW2_PROG1)
+        run_hw2_prog1();
     #else
         printf("\nNo program selected!\n")
     #endif
