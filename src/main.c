@@ -16,10 +16,12 @@
     void run_hw3_prog1(void);
 #elif defined(RUN_HW4_PROG1)
     void run_hw4_prog1(void);
-#elif defined(RUN_MODULE1_PROJ)
-    void run_module1_proj(void);
+#elif defined(RUN_MODULE_1_PROJ)
+    void run_module_1_proj(void);
 #elif defined(RUN_MODULE_2_1)
     void run_module_2_1(void);
+#elif defined(RUN_MODULE_2_2_PROG_1)
+    void run_module_2_2_prog_1(void);
 #endif
 
 
@@ -40,10 +42,12 @@ void app_main(void) {
         run_hw3_prog1();
     #elif defined(RUN_HW4_PROG1)
         run_hw4_prog1();
-    #elif defined(RUN_MODULE1_PROJ)
-        run_module1_proj();
+    #elif defined(RUN_MODULE_1_PROJ)
+        run_module_1_proj();
     #elif defined(RUN_MODULE_2_1)
         run_module_2_1();
+    #elif defined(RUN_MODULE_2_2_PROG_1)
+        run_module_2_2_prog_1();
     #else
         printf("\nNo program selected!\n")
     #endif

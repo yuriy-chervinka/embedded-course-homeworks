@@ -295,7 +295,7 @@ Simple loop. Which LED On is controlled by current direction (level on GPIO).
   * GPIO Out - GPIO 6
 
 **env:**  
-`env:module1_proj`  
+`env:module_1_proj`  
 
 ---
 
@@ -337,5 +337,49 @@ Simple loop. Which LED On is controlled by current direction (level on GPIO).
 
 **env:**  
 `env:module_2_1`  
+
+---
+
+# Module 2.2:
+**Task 1:**  
+Під'єднати реле до ESP32 та виміряти механічну затримку його спрацювання:
+- Один пін GPIO керує обмоткою реле (через модуль або транзистор).
+- Інший пін GPIO зчитує стан «сухого» контакту реле (використовуйте режим INPUT_PULLUP).
+- Для вимірювання часу використовувати micros() (або millis()) та переривання (attachInterrupt).
+- Увага: врахуйте механічний брязкіт контактів при спрацюванні переривання!
+- Провести не менше 10 вимірювань, вивести результати в Serial Monitor та порахувати середній час увімкнення/вимкнення.
+
+**Scheme 1:**  
+
+![Scheme](./img/module-2.2_prog_1_scheme.png)
+  * VT1 - BC547B
+  * R1 - 10kOm
+  * R2 - 10kOm
+
+**env 1:**  
+`env:module_2_2_prog_1`  
+
+
+**Task 2:**  
+Реалізувати програмний ШИМ (за допомогою ділеїв чи міліс):
+- ШИМ керує ЛЕД-ом через транзистор
+- Дві кнопки які налаштовують д'юті сайкл для ШИМу
+- Додати розрахунок для резисторів
+- Програму розробити в кубІДЕ або еспресіф фрейворку
+
+**Calculations:**  
+R1:
+
+R2:
+
+**Scheme 2:**  
+
+![Scheme](./img/module-2.2_prog_2_scheme.png)
+  * VT1 - BC547B
+  * R1 - 10kOm
+  * R2 - 10kOm
+
+**env 2:**  
+`env:module_2_2_prog_2`  
 
 ---
