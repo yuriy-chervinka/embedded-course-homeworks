@@ -22,6 +22,8 @@
     void run_module_2_1(void);
 #elif defined(RUN_MODULE_2_2_PROG_1)
     void run_module_2_2_prog_1(void);
+#elif defined(RUN_MODULE_2_2_PROG_2)
+    void run_module_2_2_prog_2(void);
 #endif
 
 
@@ -48,6 +50,8 @@ void app_main(void) {
         run_module_2_1();
     #elif defined(RUN_MODULE_2_2_PROG_1)
         run_module_2_2_prog_1();
+    #elif defined(RUN_MODULE_2_2_PROG_2)
+        run_module_2_2_prog_2();
     #else
         printf("\nNo program selected!\n")
     #endif

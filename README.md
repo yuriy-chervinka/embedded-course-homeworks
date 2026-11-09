@@ -369,15 +369,33 @@ Simple loop. Which LED On is controlled by current direction (level on GPIO).
 
 **Calculations:**  
 R1:
+V = 3.3V;                                                   # GPIO voltage
+VTbe = 0.7V;                                                # Base-Emitter voltage drop
+hFE = 100;                                                  # Current gain
+Ksat = 2.5                                                  # Saturation coefficient
+ITce = 10mA = 0.01A                                         # Collector-Emitter current
+ITb = (ITc/hFE) Ksat = (0.01/100) 2.5 = 0.00025A = 0.25mA;  # Base current
+IR = ITb = 0.25mA = 0.00025A
+VR = V - VTbe = 3.3 - 0.7 = 2.6V                            # Resistor voltage drop
+R = VR / IR = 2.6 / 0.00025 = 10400 Ohm = 10.4 kOhm         # Resistor nominal
+R1 = 10 kOhm (Selected from available range)
 
 R2:
+IR = Iled = 10mA = 0.01A;                   # Resistor current (the same as LED current)
+V = 5V;                                     # Supply voltage
+Vled = 1.8V;                                # LED voltage drop
+VTce = 0.2V;                                # Collector-Emitter voltage drop
+VR = V - Vled - VTce = 5 - 1.8 - 0.2 = 3V   # Resistor voltage drop
+R = VR / IR = 3 / 0.01 = 300 Ohm            # Resistor nominal
+R2 = 220 Ohm (Selected from available range)
+
 
 **Scheme 2:**  
 
 ![Scheme](./img/module-2.2_prog_2_scheme.png)
   * VT1 - BC547B
-  * R1 - 10kOm
-  * R2 - 10kOm
+  * R1 - 10 kOm
+  * R2 - 220 Ohm
 
 **env 2:**  
 `env:module_2_2_prog_2`  
