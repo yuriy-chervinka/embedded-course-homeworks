@@ -10,13 +10,13 @@
 #define TRESHHOLD_DARK  2500
 #define TRESHHOLD_LIGHT 3500
 
-static const char *TAG = "MODULE1_PROJ";
+static const char *TAG = "MODULE_1_PROJ";
 
 static filter_sma_t adc_buffer_filter;
 uint16_t adc = 2500;
 uint8_t out = 0;
 
-void run_module1_proj() {
+void run_module_1_proj() {
     // initiallizing ADC
     if (adc_init() != ESP_OK) {
         ESP_LOGE(TAG, "Critical error: ADC initialization failed!");

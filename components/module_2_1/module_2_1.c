@@ -17,7 +17,7 @@ void run_module_2_1() {
         .blink_half_period_ms = LED_BLINK_PERIOD_MS / 2
     };
 
-    // init periferals
+    // init peripherals
     led_t led;
     led_init(&led, &led_config);
     btn_init(BTN_PIN);
