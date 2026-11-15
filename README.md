@@ -571,8 +571,6 @@ R2 = 220 Ohm (Selected from available range)
   * R1 - 10 kOhm
   * R2, R3 - 220 Ohm
 
-**Notes**  
-
 **env:**  
 `env:module_2_5_prog_1`  
 
@@ -582,13 +580,24 @@ R2 = 220 Ohm (Selected from available range)
 
 **Scheme 2:**  
 
-![Scheme](./img/module-2.5_prog_1_scheme.png)
+    ESP32-S3 DevKit                      KY-040 Encoder  
+    ┌─────────────┐                      ┌─────────────┐  
+    │         3V3 ├──────────────────────┤ +           │  
+    │             │                      │             │  
+    │      GPIO 4 ├──────────────────────┤ CLK         │  
+    │             │                      │             │  
+    │      GPIO 5 ├──────────────────────┤ DT          │  
+    │             │                      │             │  
+    │         GND ├──────────┬───────────┤ GND         │  
+    │             │          │           └─────────────┘  
+    │             │          │  
+    │             │          │           KY-006 Buzzer  
+    │             │          │           ┌─────────────┐  
+    │             │          └───────────┤ -           │  
+    │             │                      │             │  
+    │      GPIO 6 ├──────────────────────┤ S           │  
+    └─────────────┘                      └─────────────┘  
 
-  * VT1 - BC547B  
-  * R1 - 10 kOhm
-  * R2, R3 - 220 Ohm
-
-**Notes**  
 
 **env:**  
 `env:module_2_5_prog_2`  
